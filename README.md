@@ -1,21 +1,13 @@
-# Угадай число
+### Примеры работы с БД:
 
-Консольная игра "Угадай число" на PHP.
+# Просмотр всех игр
+./bin/guess-number.php --list
 
-## Требования окружения
-- PHP 8.0 или выше
-- Composer 2.0 или выше
-- Расширение PHP: readline (для ввода данных)
+# Только выигранные игры  
+./bin/guess-number.php --list win
 
-## Установка из GitHub
+# Статистика игроков
+./bin/guess-number.php --top
 
-```bash
-# Клонируем репозиторий
-git clone https://github.com/GoodLixe/guess-number.git
-cd guess-number
-
-# Устанавливаем зависимости
-composer install
-
-# Делаем скрипт исполняемым
-chmod +x bin/guess-number
+# Повтор конкретной игры
+./bin/guess-number.php --replay 5

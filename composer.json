@@ -1,24 +1,30 @@
 {
     "name": "goodlixe/guess-number",
-    "description": "Console number guessing game",
-    "type": "library",
+    "description": "Console number guessing game with SQLite database",
+    "type": "project",
     "license": "MIT",
+    "bin": [
+        "bin/guess-number"
+    ],
     "autoload": {
-        "psr-4": {
-            "Goodlixe\\GuessNumber\\": "src/"
-        },
         "files": [
             "src/Controller.php",
-            "src/View.php"
+            "src/View.php",
+            "src/Database.php",
+            "src/GameRepository.php",
+            "src/ArgsParser.php"
         ]
     },
     "authors": [
         {
-            "name": "Ilnur Faizullin"
+            "name": "Ilnur Faizullin",
+            "email": "gdlxesup@gmail.com"
         }
     ],
     "minimum-stability": "stable",
     "require": {
-        "wp-cli/php-cli-tools": "^0.12.6"
+        "php": ">=8.0",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*"
     }
 }
