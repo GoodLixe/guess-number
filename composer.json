@@ -4,14 +4,17 @@
     "type": "project",
     "license": "MIT",
     "bin": [
-        "bin/guess-number"
+        "bin/guess-number.php"
     ],
     "autoload": {
         "files": [
+            "vendor/gabordemooij/redbean/RedBeanPHP/Facade.php",
             "src/Controller.php",
             "src/View.php",
             "src/Database.php",
             "src/GameRepository.php",
+            "src/DatabaseORM.php",
+            "src/GameRepositoryORM.php",
             "src/ArgsParser.php"
         ]
     },
@@ -25,6 +28,7 @@
     "require": {
         "php": ">=8.0",
         "ext-pdo": "*",
-        "ext-pdo_sqlite": "*"
+        "ext-pdo_sqlite": "*",
+        "gabordemooij/redbean": "^5.7"
     }
 }

@@ -8,8 +8,9 @@ class Controller
 
     public function __construct()
     {
-        $db = new Database();
-        $this->gameRepo = new GameRepository($db);
+        // Заменяем на ORM версию
+        $db = new DatabaseORM();
+        $this->gameRepo = new GameRepositoryORM($db);
     }
 
     public function run($args)
